@@ -1,0 +1,11 @@
+
+Exercício Complementar para NP1.
+
+(Exercicio 03) 
+
+Cada nação tem uma bandeira e as cores representam a características do país. 
+A bandeira é a identificação de uma nação e é utilizada em eventos importantes, 
+seja para homenagear uma pessoa importante que faleceu, em guerras, como 
+também em solenidades oficiais públicas.
+
+- Realizar um desenho em Linguagem JAVA para uma bandeira estadual.

@@ -1,0 +1,20 @@
+
+Exercício Complementar para NP1.
+
+(Exercicio 01) 
+
+Realizar um código em Linguagem C para cadastro de paciente.
+
+- Gravar dados de um pequeno paciente (criança)
+
+- Gravar os dados do Nome, Idade, Peso, Altura
+
+- Com os dados de Peso e Altura, verificar o IMC para saber se a criança 
+  não está subnutrita ou com sobrepeso 
+
+- Gravar os dados em um arquivo do tipo TXT
+
+- Propiciar ao médico um acesso rápido aos dados do paciente, 
+  atravéss de uma págnia HTML
+
+- Visualizar os dados, IMC e uma foto do paciente na página HTML
