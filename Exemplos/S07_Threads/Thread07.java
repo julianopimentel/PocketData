@@ -56,7 +56,7 @@ public class Thread07 extends JFrame {
         setLayout(null);
         setVisible(true);
         backBuffer = new BufferedImage(janelaW, janelaH, BufferedImage.TYPE_INT_RGB);
-	tocarMusica(musica1, 999); 
+	tocarMusica(musica2, 999); 
     }
 
     public void run() {
