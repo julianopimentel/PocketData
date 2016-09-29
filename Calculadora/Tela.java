@@ -48,6 +48,11 @@ public class Tela extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora Portátil 1.0");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(217, 223));
+        setMinimumSize(new java.awt.Dimension(217, 223));
+        setSize(new java.awt.Dimension(217, 223));
 
         BotaoLimpar.setText("CE");
         BotaoLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,57 +63,132 @@ public class Tela extends javax.swing.JFrame {
 
         BotaoMult.setText("*");
         BotaoMult.setPreferredSize(new java.awt.Dimension(45, 23));
+        BotaoMult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoMultActionPerformed(evt);
+            }
+        });
 
         Botao7.setText("7");
         Botao7.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao7ActionPerformed(evt);
+            }
+        });
 
         Botao8.setText("8");
         Botao8.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao8ActionPerformed(evt);
+            }
+        });
 
         Botao4.setText("4");
         Botao4.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao4ActionPerformed(evt);
+            }
+        });
 
         Botao5.setText("5");
         Botao5.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao5ActionPerformed(evt);
+            }
+        });
 
         Botao1.setText("1");
         Botao1.setMaximumSize(new java.awt.Dimension(45, 23));
         Botao1.setMinimumSize(new java.awt.Dimension(45, 23));
         Botao1.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao1ActionPerformed(evt);
+            }
+        });
 
         Botao2.setText("2");
         Botao2.setMaximumSize(new java.awt.Dimension(45, 23));
         Botao2.setMinimumSize(new java.awt.Dimension(45, 23));
         Botao2.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao2ActionPerformed(evt);
+            }
+        });
 
         Botao9.setText("9");
         Botao9.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao9ActionPerformed(evt);
+            }
+        });
 
         Botao6.setText("6");
         Botao6.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao6ActionPerformed(evt);
+            }
+        });
 
         Botao3.setText("3");
         Botao3.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao3ActionPerformed(evt);
+            }
+        });
 
         Botao0.setText("0");
         Botao0.setToolTipText("");
         Botao0.setMaximumSize(new java.awt.Dimension(45, 23));
         Botao0.setMinimumSize(new java.awt.Dimension(45, 23));
         Botao0.setPreferredSize(new java.awt.Dimension(45, 23));
+        Botao0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao0ActionPerformed(evt);
+            }
+        });
 
         BotaoIgual.setText("=");
         BotaoIgual.setMaximumSize(new java.awt.Dimension(45, 23));
         BotaoIgual.setMinimumSize(new java.awt.Dimension(45, 23));
         BotaoIgual.setPreferredSize(new java.awt.Dimension(45, 23));
+        BotaoIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoIgualActionPerformed(evt);
+            }
+        });
 
         BotaoDiv.setText("/");
         BotaoDiv.setPreferredSize(new java.awt.Dimension(45, 23));
+        BotaoDiv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoDivActionPerformed(evt);
+            }
+        });
 
         BotaoMenos.setText("-");
         BotaoMenos.setPreferredSize(new java.awt.Dimension(45, 23));
+        BotaoMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoMenosActionPerformed(evt);
+            }
+        });
 
         BotaoSoma.setText("+");
         BotaoSoma.setPreferredSize(new java.awt.Dimension(45, 23));
+        BotaoSoma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoSomaActionPerformed(evt);
+            }
+        });
 
         Visor.setEditable(false);
         Visor.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -202,12 +282,108 @@ public class Tela extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoLimparActionPerformed
         //Limpar o visor
         Visor.setText("");
     }//GEN-LAST:event_BotaoLimparActionPerformed
+
+    private void Botao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao0ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "0"); 
+    }//GEN-LAST:event_Botao0ActionPerformed
+
+    private void Botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao1ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "1"); 
+    }//GEN-LAST:event_Botao1ActionPerformed
+
+    private void Botao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao2ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "2"); 
+    }//GEN-LAST:event_Botao2ActionPerformed
+
+    private void Botao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao3ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "3"); 
+    }//GEN-LAST:event_Botao3ActionPerformed
+
+    private void Botao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao4ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "4"); 
+    }//GEN-LAST:event_Botao4ActionPerformed
+
+    private void Botao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao5ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "5"); 
+    }//GEN-LAST:event_Botao5ActionPerformed
+
+    private void Botao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao6ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "6"); 
+    }//GEN-LAST:event_Botao6ActionPerformed
+
+    private void Botao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao7ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "7"); 
+    }//GEN-LAST:event_Botao7ActionPerformed
+
+    private void Botao8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao8ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "8"); 
+    }//GEN-LAST:event_Botao8ActionPerformed
+
+    private void Botao9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao9ActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "9"); 
+    }//GEN-LAST:event_Botao9ActionPerformed
+
+    private void BotaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoIgualActionPerformed
+               //Mostrar resultado
+        String valor = Visor.getText();
+        System.out.println(">>>"+valor);
+               
+        Calculos calculos = new Calculos(); //chama a classe calculos
+        String resultado = calculos.calculadora(valor);
+        
+        Visor.setText(resultado);
+    }//GEN-LAST:event_BotaoIgualActionPerformed
+
+    private void BotaoSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSomaActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "+"); 
+    }//GEN-LAST:event_BotaoSomaActionPerformed
+
+    private void BotaoMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMenosActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "-"); 
+    }//GEN-LAST:event_BotaoMenosActionPerformed
+
+    private void BotaoDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDivActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "/"); 
+    }//GEN-LAST:event_BotaoDivActionPerformed
+
+    private void BotaoMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMultActionPerformed
+               //Mostrar valor 
+        String valor = Visor.getText();
+        Visor.setText(valor + "*"); 
+    }//GEN-LAST:event_BotaoMultActionPerformed
 
     /**
      * @param args the command line arguments
