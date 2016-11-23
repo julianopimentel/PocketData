@@ -9,11 +9,17 @@ Link: https://aulasguilherme.wordpress.com/2014/10/07/projeto-09-base-simulacao-
  */
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.*;
+import java.awt.Frame;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class SistemaSolar extends JPanel{
+    
+private Controle controle;
 private Image fundo; //estrelas
 private Image sol;    //sol
 private Image mercurio; //mercúrio
@@ -61,8 +67,8 @@ private Image lua;//Lua
 public SistemaSolar()
 {
                 //Imagens Interface Layout    
-            sol = Toolkit.getDefaultToolkit().getImage("C:/Fontes/sunny-icon.png");
-            fundo = Toolkit.getDefaultToolkit().getImage("C:/Fontes/estrelas.jpg");
+            sol = Toolkit.getDefaultToolkit().getImage("src/Fontes/sol.jpg");
+            fundo = Toolkit.getDefaultToolkit().getImage("src/Fontes/estrelas.jpg");
 /////////////////////
 ///////////////////// Mercurio
 /////////////////////
@@ -71,7 +77,7 @@ public SistemaSolar()
         dx_merc = 565; //posição x inicial do circulo de mercurio
         dy_merc = 330; //posição y inicial do circulo de mercurio
         x_merc = 0; y_merc = 0;
-        mercurio = Toolkit.getDefaultToolkit().getImage("C:/Fontes/mercurio.jpg");
+        mercurio = Toolkit.getDefaultToolkit().getImage("src/Fontes/mercurio.jpg");
             //ajusta a velocidade do movimento mercurio
             tempo.schedule(new temp(),100,300);        
 /////////////////////
@@ -81,7 +87,7 @@ public SistemaSolar()
         dx_ven = 565;  //Posicao x inicial do circulo de Venus
         dy_ven = 330;  //Posicao y inicial do circulo de Venus
         x_ven = 0; y_ven = 0;
-        venus = Toolkit.getDefaultToolkit().getImage("C:/Fontes/venus.jpg");
+        venus = Toolkit.getDefaultToolkit().getImage("src/Fontes/venus.jpg");
 /////////////////////
 ///////////////////// Terra
 /////////////////////
@@ -89,14 +95,14 @@ public SistemaSolar()
         dx_ter = 565; // Posicao x inicial do circulo de Terra
         dy_ter = 330; // Posicao y inicial do circulo de Terra
         x_ter = 0; y_ter = 0;
-        terra = Toolkit.getDefaultToolkit().getImage("C:/Fontes/2.gif");
+        terra = Toolkit.getDefaultToolkit().getImage("src/Fontes/2.gif");
         
         /////////////////Lua
         tam_lua = 25; //tamanho do raio da trajetória de Plutao
         dx_lua = 760; //posição x inicial do circulo de Plutao
         dy_lua = 310; //posição y inicial do circulo de Plutao
         x_lua = 0; y_lua = 0;
-        lua = Toolkit.getDefaultToolkit().getImage("C:/Fontes/lua.jpg");
+        lua = Toolkit.getDefaultToolkit().getImage("src/Fontes/lua.jpg");
         
         
 ///////////////////
@@ -106,7 +112,7 @@ public SistemaSolar()
         dx_mar = 565; //Posicao x inicial do circulo de Marte
         dy_mar = 330; //Posicao y inicial do Circulo de marte
         x_mar = 0;y_mar = 0;
-        marte = Toolkit.getDefaultToolkit().getImage("C:/Fontes/marte.jpg");
+        marte = Toolkit.getDefaultToolkit().getImage("src/Fontes/marte.jpg");
         
 ///////////////////
 /////////////////// Jupiter
@@ -115,7 +121,7 @@ public SistemaSolar()
         dx_jup = 565; //Posicao x inicial do circulo de jupiter
         dy_jup = 330; //Posicao y inicial do Circulo de jupiter
         x_jup = 0;y_mar = 0;
-        jupiter = Toolkit.getDefaultToolkit().getImage("C:/Fontes/jupiter.jpg");
+        jupiter = Toolkit.getDefaultToolkit().getImage("src/Fontes/jupiter.jpg");
 /////////////////////
 ///////////////////// Saturno
 /////////////////////
@@ -123,7 +129,7 @@ public SistemaSolar()
         dx_sat = 565; // Posicao x inicial do circulo de saturno
         dy_sat = 330; // Posicao y inicial do circulo de saturno
         x_sat = 0; y_sat = 0;
-        saturno = Toolkit.getDefaultToolkit().getImage("C:/Fontes/saturno.jpg");
+        saturno = Toolkit.getDefaultToolkit().getImage("src/Fontes/saturno.jpg");
         
 ///////////////////
 /////////////////// Urano
@@ -132,7 +138,7 @@ public SistemaSolar()
         dx_ura = 565; //Posicao x inicial do circulo de urano
         dy_ura = 330; //Posicao y inicial do Circulo de urano
         x_ura = 0;y_mar = 0;
-        urano = Toolkit.getDefaultToolkit().getImage("C:/Fontes/urano.jpg");
+        urano = Toolkit.getDefaultToolkit().getImage("src/Fontes/urano.jpg");
         
 ///////////////////
 ////////////////// Netuno
@@ -141,7 +147,7 @@ public SistemaSolar()
         dx_net = 565; //Posicao x inicial do circulo de netuno
         dy_net = 330; //Posicao y inicial do Circulo de netuno
         x_net = 0;y_net = 0;
-        netuno = Toolkit.getDefaultToolkit().getImage("C:/Fontes/netuno.jpg");
+        netuno = Toolkit.getDefaultToolkit().getImage("src/Fontes/netuno.jpg");
                                 
 /////////////////////
 ///////////////////// Plutao
@@ -151,17 +157,38 @@ public SistemaSolar()
         dx_plut = 565; //posição x inicial do circulo de Plutao
         dy_plut = 330; //posição y inicial do circulo de Plutao
         x_plut = 0; y_plut = 0;
-        plutao = Toolkit.getDefaultToolkit().getImage("C:/Fontes/plutao.jpg");                
+        plutao = Toolkit.getDefaultToolkit().getImage("src/Fontes/plutao.jpg");                
         
         
 }
-@Override
+
+    private class Painel extends JPanel{
+
+        private Painel() {
+            this.addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyReleased(KeyEvent e) {
+                    System.out.println(e.getKeyCode());
+                }
+            });
+        }
+    }
+
+
+
 public void paintComponent(Graphics g)
 {
 //Desenha o Fundo com estrelas
 g.drawImage(fundo,0,0,1200,720,this);//Carrega a imagem das estrelas 1200x720
 //Desenha o Sol
 g.drawImage(sol,535,295,100,100,this);//Carrega a imagem do sol 130x130
+
+Controle r = new Controle();
+g.setColor(Color.white);
+g.setFont(new Font("helvica",Font.BOLD,20));
+g.drawString("Nome: " + r.getNomeJogador(), 20, 25);
+
+g.setFont(new Font("helvica",Font.BOLD,9));
             
 //Planeta Mercúrio...
             
